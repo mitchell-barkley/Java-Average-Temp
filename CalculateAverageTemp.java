@@ -9,7 +9,17 @@ public class CalculateAverageTemp extends CreateArrayFromUserInput{
             sum += arr[i];
         }
         average = sum / arr.length;
-        System.out.println("The average temperature is: " + average);
+        System.out.println("The average temperature over " + arr.length + " days is: " + average);
+    }
+
+    public void calculateOverAverage() {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > average) {
+                count++;
+            }
+        }
+        System.out.println("The number of days above average temperature is: " + count);
     }
 
 }
